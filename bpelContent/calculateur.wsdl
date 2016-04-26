@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="CalculateurServiceImplService" targetNamespace="http://calculateur.bpel.jerome.atod26.afcepf.fr" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://calculateur.bpel.jerome.atod26.afcepf.fr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema elementFormDefault="unqualified" targetNamespace="http://calculateur.bpel.jerome.atod26.afcepf.fr" version="1.0" xmlns:tns="http://calculateur.bpel.jerome.atod26.afcepf.fr" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="ajouter" type="tns:ajouter"/>
+<xs:element name="ajouterResponse" type="tns:ajouterResponse"/>
+<xs:element name="multiplier" type="tns:multiplier"/>
+<xs:element name="multiplierResponse" type="tns:multiplierResponse"/>
+<xs:complexType name="multiplier">
+    <xs:sequence>
+      <xs:element name="premierMultiplication" type="xs:double"/>
+      <xs:element name="deuxiemeMultiplication" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="multiplierResponse">
+    <xs:sequence>
+      <xs:element name="resultatMultiplication" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="ajouter">
+    <xs:sequence>
+      <xs:element name="premierAddition" type="xs:double"/>
+      <xs:element name="deuxiemeAddition" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="ajouterResponse">
+    <xs:sequence>
+      <xs:element name="resultatAddition" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ajouter">
+    <wsdl:part element="tns:ajouter" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ajouterResponse">
+    <wsdl:part element="tns:ajouterResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="multiplierResponse">
+    <wsdl:part element="tns:multiplierResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="multiplier">
+    <wsdl:part element="tns:multiplier" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ICalculateurService">
+    <wsdl:operation name="multiplier">
+      <wsdl:input message="tns:multiplier" name="multiplier">
+    </wsdl:input>
+      <wsdl:output message="tns:multiplierResponse" name="multiplierResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ajouter">
+      <wsdl:input message="tns:ajouter" name="ajouter">
+    </wsdl:input>
+      <wsdl:output message="tns:ajouterResponse" name="ajouterResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalculateurServiceImplServiceSoapBinding" type="tns:ICalculateurService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="multiplier">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="multiplier">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="multiplierResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ajouter">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ajouter">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ajouterResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculateurServiceImplService">
+    <wsdl:port binding="tns:CalculateurServiceImplServiceSoapBinding" name="CalculateurServiceImplPort">
+      <soap:address location="http://localhost:8080/BPEL-WS/CalculateurServiceImpl"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
