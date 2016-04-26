@@ -1,19 +1,29 @@
 package fr.afcepf.atod26.bpel.ws.impl;
 
+import javax.ejb.Remote;
+import javax.ejb.Stateless;
 import javax.jws.WebService;
+
+import org.apache.log4j.Logger;
 
 import fr.afcepf.atod26.bpel.ws.api.ICalculateurService;
 
-@WebService(endpointInterface = "fr.afcepf.atod26.bpel.ws.api.ICalculateur", targetNamespace = "http://calculateur.bpel.jerome.atod26.afcepf.fr")
+@WebService(targetNamespace = "http://calculateur.bpel.jerome.atod26.afcepf.fr", endpointInterface = "fr.afcepf.atod26.bpel.ws.api.ICalculateurService")
+@Remote(ICalculateurService.class)
+@Stateless
 public class CalculateurServiceImpl implements ICalculateurService {
+
+	private Logger logger = Logger.getLogger(CalculateurServiceImpl.class);
 
 	@Override
 	public double additition(final double paramPremier, final double paramDeuxieme) {
+		logger.debug("Méthode additition");
 		return paramPremier + paramDeuxieme;
 	}
 
 	@Override
 	public double multiplication(final double paramPremier, final double paramDeuxieme) {
+		logger.debug("Méthode multiplication");
 		return paramPremier * paramDeuxieme;
 	}
 
