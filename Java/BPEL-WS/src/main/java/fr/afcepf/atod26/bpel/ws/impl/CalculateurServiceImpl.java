@@ -18,12 +18,14 @@ public class CalculateurServiceImpl implements ICalculateurService {
 	@Override
 	public double additition(final double paramPremier, final double paramDeuxieme) {
 		logger.info("Méthode additition");
+		System.out.println("addition");
 		return paramPremier + paramDeuxieme;
 	}
 
 	@Override
 	public double multiplication(final double paramPremier, final double paramDeuxieme) {
 		logger.info("Méthode multiplication");
+		System.out.println("multiplication");
 		return paramPremier * paramDeuxieme;
 	}
 
