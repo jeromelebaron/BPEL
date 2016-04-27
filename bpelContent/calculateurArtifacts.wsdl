@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <definitions name="calculateur"
-	targetNamespace="http://calculateur.bpel.jerome.atod26.afcepf.fr"
-	xmlns:tns="http://calculateur.bpel.jerome.atod26.afcepf.fr" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+	targetNamespace="http://calcul.bpel.jerome.atod26.afcepf.fr"
+	xmlns:tns="http://calcul.bpel.jerome.atod26.afcepf.fr" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
 	xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
 
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
@@ -11,7 +11,7 @@
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<types>
 		<schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-			targetNamespace="http://calculateur.bpel.jerome.atod26.afcepf.fr"
+			targetNamespace="http://calcul.bpel.jerome.atod26.afcepf.fr"
 			xmlns="http://www.w3.org/2001/XMLSchema">
 
 			<element name="calculateurRequest">
@@ -73,7 +73,7 @@
 			transport="http://schemas.xmlsoap.org/soap/http" />
 		<operation name="process">
 			<soap:operation
-				soapAction="http://calculateur.bpel.jerome.atod26.afcepf.fr/process" />
+				soapAction="http://calcul.bpel.jerome.atod26.afcepf.fr/process" />
 			<input>
 				<soap:body use="literal" />
 			</input>
