@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:calculateur.bpel.jerome.atod26.afcepf.fr="http://calculateur.bpel.jerome.atod26.afcepf.fr">
-  <process name="calculateur.bpel.jerome.atod26.afcepf.fr:calculateur">
-    <active>true</active>
-    <retired>false</retired>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:calcul.bpel.jerome.atod26.afcepf.fr="http://calcul.bpel.jerome.atod26.afcepf.fr" xmlns:calculateur.bpel.jerome.atod26.afcepf.fr="http://calculateur.bpel.jerome.atod26.afcepf.fr">
+  <process name="calcul.bpel.jerome.atod26.afcepf.fr:calculateur">
     <process-events generate="all"/>
     <provide partnerLink="client">
-      <service name="calculateur.bpel.jerome.atod26.afcepf.fr:calculateurService" port="calculateurPort"/>
+      <service name="calcul.bpel.jerome.atod26.afcepf.fr:calculateurService" port="calculateurPort"/>
     </provide>
+    <invoke partnerLink="calculateurWS">
+      <service name="calculateur.bpel.jerome.atod26.afcepf.fr:CalculateurServiceImplService" port="CalculateurServiceImplPort"/>
+    </invoke>
   </process>
 </deploy>
