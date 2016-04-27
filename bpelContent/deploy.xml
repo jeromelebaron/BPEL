@@ -3,5 +3,9 @@
   <process name="calculateur.bpel.jerome.atod26.afcepf.fr:calculateur">
     <active>true</active>
     <retired>false</retired>
+    <process-events generate="all"/>
+    <provide partnerLink="client">
+      <service name="calculateur.bpel.jerome.atod26.afcepf.fr:calculateurService" port="calculateurPort"/>
+    </provide>
   </process>
 </deploy>
