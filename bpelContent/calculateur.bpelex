@@ -18,7 +18,7 @@
   </extensions>
   <extensions>
     <extendedObject href="calculateur.bpel#/"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1461748636204"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1461751709133"/>
   </extensions>
   <extensions>
     <extendedObject href="calculateur.bpel#//@activity/@activities.1"/>

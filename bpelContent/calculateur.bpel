@@ -3,10 +3,13 @@
 <bpel:process name="calculateur"
 	targetNamespace="http://calculateur.bpel.jerome.atod26.afcepf.fr"
 	suppressJoinFailure="yes" xmlns:tns="http://calculateur.bpel.jerome.atod26.afcepf.fr"
-	xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable">
+	xmlns:ns1="http://calculateur.bpel.jerome.atod26.afcepf.fr" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable">
 
 	<!-- Import the client WSDL -->
 	<bpel:import location="calculateurArtifacts.wsdl"
+		namespace="http://calculateur.bpel.jerome.atod26.afcepf.fr"
+		importType="http://schemas.xmlsoap.org/wsdl/" />
+	<bpel:import location="calculateur.wsdl"
 		namespace="http://calculateur.bpel.jerome.atod26.afcepf.fr"
 		importType="http://schemas.xmlsoap.org/wsdl/" />
 
@@ -18,6 +21,9 @@
 		<!-- The 'client' role represents the requester of this service. -->
 		<bpel:partnerLink name="client" partnerLinkType="tns:calculateur"
 			myRole="calculateurProvider" />
+		<!-- The 'client' role represents the requester of this service. -->
+		<bpel:partnerLink name="calculateurWS"
+			partnerLinkType="ns1:calculateurWebService" partnerRole="calculateurWebServiceProvider" />
 	</bpel:partnerLinks>
 
 	<!-- ================================================================= -->
