@@ -3,7 +3,7 @@
 	targetNamespace="http://calculateur.bpel.jerome.atod26.afcepf.fr"
 	xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 	xmlns:tns="http://calculateur.bpel.jerome.atod26.afcepf.fr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<wsdl:types>
 		<xs:schema elementFormDefault="unqualified"
 			targetNamespace="http://calculateur.bpel.jerome.atod26.afcepf.fr"
@@ -67,6 +67,9 @@
 			</wsdl:output>
 		</wsdl:operation>
 	</wsdl:portType>
+	<plnk:partnerLinkType name="calculateurWebService">
+		<plnk:role name="calculateurWebServiceProvider" portType="tns:ICalculateurService" />
+	</plnk:partnerLinkType>
 	<wsdl:binding name="CalculateurServiceImplServiceSoapBinding"
 		type="tns:ICalculateurService">
 		<soap:binding style="document"
