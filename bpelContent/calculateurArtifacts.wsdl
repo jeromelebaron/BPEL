@@ -28,7 +28,8 @@
 			<element name="calculateurResponse">
 				<complexType>
 					<sequence>
-						<element name="result" type="string" />
+						<!-- <element name="result" type="string" /> -->
+						<element name="result" type="double" />
 					</sequence>
 				</complexType>
 			</element>
