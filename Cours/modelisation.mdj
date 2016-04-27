@@ -12,30 +12,6 @@
 			"name": "Model",
 			"ownedElements": [
 				{
-					"_type": "UMLActivity",
-					"_id": "AAAAAAFUV9Lx34y5ghw=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Activity1",
-					"ownedElements": [
-						{
-							"_type": "UMLActivityDiagram",
-							"_id": "AAAAAAFUV9Lx4Iy6EYA=",
-							"_parent": {
-								"$ref": "AAAAAAFUV9Lx34y5ghw="
-							},
-							"name": "BPEL",
-							"visible": true,
-							"defaultDiagram": false
-						}
-					],
-					"visibility": "public",
-					"isReentrant": true,
-					"isReadOnly": false,
-					"isSingleExecution": false
-				},
-				{
 					"_type": "UMLCollaboration",
 					"_id": "AAAAAAFUV9Nuy4y/Egk=",
 					"_parent": {
@@ -1902,7 +1878,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFUV9Nuy4y/Egk="
 							},
-							"name": "Role1",
+							"name": "SOAPUI",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
