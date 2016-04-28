@@ -54,7 +54,7 @@
     <sequenceFlow id="_30" sourceRef="_23" targetRef="_28"/>
     <sequenceFlow id="_31" sourceRef="_23" targetRef="_24"/>
     <sequenceFlow id="_32" sourceRef="_23" targetRef="_25"/>
-    <eventBasedGateway eventGatewayType="Exclusive" gatewayDirection="Unspecified" id="_23" instantiate="false" name="sempn_evenement">
+    <eventBasedGateway eventGatewayType="Exclusive" gatewayDirection="Unspecified" id="_23" instantiate="false" name="attente_evenement">
       <incoming>_29</incoming>
       <outgoing>_30</outgoing>
       <outgoing>_31</outgoing>
@@ -199,7 +199,7 @@
       <bpmndi:BPMNShape bpmnElement="_23" id="Yaoqiang-_23">
         <dc:Bounds height="42.0" width="42.0" x="547.5918702794077" y="131.98450307668682"/>
         <bpmndi:BPMNLabel>
-          <dc:Bounds height="19.8359375" width="97.0" x="520.0918702794077" y="175.98450307668682"/>
+          <dc:Bounds height="19.8359375" width="98.0" x="519.5918702794077" y="175.98450307668682"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="_24" id="Yaoqiang-_24">
