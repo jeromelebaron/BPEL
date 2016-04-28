@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yaoqiang="http://bpmn.sourceforge.net" exporter="Yaoqiang BPMN Editor" exporterVersion="4.1" expressionLanguage="http://www.w3.org/1999/XPath" id="_1461829801134" name="" targetNamespace="http://sourceforge.net/bpmn/definitions/_1461829801134" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+  <collaboration id="COLLABORATION_1" isClosed="false">
+    <extensionElements>
+      <yaoqiang:pageFormat height="841.8897637795276" imageableHeight="831.8897637795276" imageableWidth="588.1102362204724" imageableX="5.0" imageableY="5.0" orientation="0" width="598.1102362204724"/>
+      <yaoqiang:page background="#FFFFFF" horizontalCount="1" verticalCount="1"/>
+    </extensionElements>
+    <participant id="_2" name="CLIENT_SOAP_UI" processRef="PROCESS_1">
+      <extensionElements>
+        <yaoqiang:style align="center"/>
+      </extensionElements>
+      <participantMultiplicity maximum="1" minimum="0"/>
+    </participant>
+    <participant id="_3" name="PROCESS_CALCULATEUR">
+      <extensionElements>
+        <yaoqiang:style align="center"/>
+      </extensionElements>
+      <participantMultiplicity maximum="1" minimum="0"/>
+    </participant>
+    <participant id="_4" name="WS_CALCULATEUR" processRef="PROCESS_2">
+      <extensionElements>
+        <yaoqiang:style align="center"/>
+      </extensionElements>
+      <participantMultiplicity maximum="1" minimum="0"/>
+    </participant>
+  </collaboration>
+  <process id="PROCESS_1" isClosed="false" isExecutable="true" processType="None">
+    <startEvent id="_5" isInterrupting="true" name="Start Event" parallelMultiple="false">
+      <outgoing>_7</outgoing>
+      <outputSet/>
+    </startEvent>
+    <task completionQuantity="1" id="_6" isForCompensation="false" name="Task" startQuantity="1">
+      <incoming>_7</incoming>
+      <outgoing>_9</outgoing>
+    </task>
+    <sequenceFlow id="_7" sourceRef="_5" targetRef="_6"/>
+    <task completionQuantity="1" id="_8" isForCompensation="false" name="Task" startQuantity="1">
+      <incoming>_9</incoming>
+    </task>
+    <sequenceFlow id="_9" sourceRef="_6" targetRef="_8"/>
+  </process>
+  <process id="PROCESS_2" isClosed="false" isExecutable="true" processType="None">
+    <task completionQuantity="1" id="_10" isForCompensation="false" name="multiplication" startQuantity="1"/>
+  </process>
+  <bpmndi:BPMNDiagram id="Yaoqiang_Diagram-COLLABORATION_1" name="Untitled Diagram" resolution="96.0">
+    <bpmndi:BPMNPlane bpmnElement="COLLABORATION_1">
+      <bpmndi:BPMNShape bpmnElement="_2" id="Yaoqiang-_2" isExpanded="true" isHorizontal="true">
+        <dc:Bounds height="200.0" width="1078.0" x="50.0" y="50.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="123.0" width="23.609375" x="55.6953125" y="88.5"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" id="Yaoqiang-_3" isExpanded="true" isHorizontal="true">
+        <dc:Bounds height="200.0" width="1078.0" x="50.0" y="300.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="182.0" width="23.609375" x="55.6953125" y="309.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" id="Yaoqiang-_4" isExpanded="true" isHorizontal="true">
+        <dc:Bounds height="200.0" width="1078.0" x="50.0" y="550.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="137.0" width="23.609375" x="55.6953125" y="581.5"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" id="Yaoqiang-_5">
+        <dc:Bounds height="32.0" width="32.0" x="112.16666666666663" y="136.66666666666666"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="59.0" x="98.66666666666663" y="176.74869791666666"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" id="Yaoqiang-_6">
+        <dc:Bounds height="55.0" width="85.0" x="230.16666666666663" y="125.16666666666666"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="29.0" x="258.16666666666663" y="144.74869791666666"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" id="Yaoqiang-_8">
+        <dc:Bounds height="55.0" width="85.0" x="426.1666666666667" y="125.16666666666666"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="29.0" x="454.1666666666667" y="144.74869791666666"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_10" id="Yaoqiang-_10">
+        <dc:Bounds height="55.0" width="85.0" x="199.87452758881327" y="618.638807904114"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="66.0" x="209.37452758881327" y="638.220839154114"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_9" id="Yaoqiang-_9">
+        <di:waypoint x="315.0" y="152.66666666666666"/>
+        <di:waypoint x="426.0" y="152.66666666666666"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="6.0" x="367.5" y="142.74869791666666"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7" id="Yaoqiang-_7">
+        <di:waypoint x="143.99652740093578" y="152.66666666666666"/>
+        <di:waypoint x="230.0" y="152.66666666666666"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="19.8359375" width="6.0" x="183.99826370046787" y="142.74869791666666"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
