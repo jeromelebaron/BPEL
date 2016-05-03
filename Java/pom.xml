@@ -4,7 +4,7 @@
 	<artifactId>BPEL-Reactor</artifactId>
 	<packaging>pom</packaging>
 	<parent>
-		<groupId>fr.afcaepf.atod26</groupId>
+		<groupId>fr.afcepf.atod26</groupId>
 		<artifactId>BPEL-Parent</artifactId>
 		<version>0.1</version>
 		<relativePath>BPEL-Parent/pom.xml</relativePath>
