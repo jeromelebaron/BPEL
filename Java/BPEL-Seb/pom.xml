@@ -10,6 +10,13 @@
 	<artifactId>BPEL-Seb</artifactId>
 	<packaging>ejb</packaging>
 
+	<dependencies>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
