@@ -13,6 +13,7 @@
 	<modules>
 		<module>BPEL-Parent</module>
 		<module>BPEL-WS</module>
+		<module>BPEL-Seb</module>
 	</modules>
 
 </project>
