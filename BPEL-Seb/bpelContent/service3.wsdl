@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="Service3ImplService" targetNamespace="http://trois.service.afcepf.fr" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://trois.service.afcepf.fr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema elementFormDefault="unqualified" targetNamespace="http://trois.service.afcepf.fr" version="1.0" xmlns:tns="http://trois.service.afcepf.fr" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="methodeServiceTrois" type="tns:methodeServiceTrois"/>
+<xs:element name="methodeServiceTroisResponse" type="tns:methodeServiceTroisResponse"/>
+<xs:complexType name="methodeServiceTrois">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="methodeServiceTroisResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reponseServiceTrois" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="methodeServiceTrois">
+    <wsdl:part element="tns:methodeServiceTrois" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="methodeServiceTroisResponse">
+    <wsdl:part element="tns:methodeServiceTroisResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IService3">
+    <wsdl:operation name="methodeServiceTrois">
+      <wsdl:input message="tns:methodeServiceTrois" name="methodeServiceTrois">
+    </wsdl:input>
+      <wsdl:output message="tns:methodeServiceTroisResponse" name="methodeServiceTroisResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service3ImplServiceSoapBinding" type="tns:IService3">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="methodeServiceTrois">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="methodeServiceTrois">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="methodeServiceTroisResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service3ImplService">
+    <wsdl:port binding="tns:Service3ImplServiceSoapBinding" name="Service3ImplPort">
+      <soap:address location="http://localhost:58080/BPEL-Seb/Service3Impl"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

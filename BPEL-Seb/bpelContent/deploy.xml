@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:deux.service.afcepf.fr="http://deux.service.afcepf.fr" xmlns:rappel.bpel.afcepf.fr="http://rappel.bpel.afcepf.fr" xmlns:trois.service.afcepf.fr="http://trois.service.afcepf.fr" xmlns:un.service.afcepf.fr="http://un.service.afcepf.fr">
+  <process name="rappel.bpel.afcepf.fr:RappelBpel">
+    <active>true</active>
+    <retired>false</retired>
+    <process-events generate="all"/>
+    <provide partnerLink="client">
+      <service name="rappel.bpel.afcepf.fr:RappelBpelService" port="RappelBpelPort"/>
+    </provide>
+    <invoke partnerLink="service1">
+      <service name="un.service.afcepf.fr:Service1ImplService" port="Service1ImplPort"/>
+    </invoke>
+    <invoke partnerLink="service2">
+      <service name="deux.service.afcepf.fr:Service2ImplService" port="Service2ImplPort"/>
+    </invoke>
+    <invoke partnerLink="service3">
+      <service name="trois.service.afcepf.fr:Service3ImplService" port="Service3ImplPort"/>
+    </invoke>
+  </process>
+</deploy>
